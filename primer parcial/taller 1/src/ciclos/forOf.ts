@@ -13,7 +13,7 @@ export const forOf = (series: ISerie[], personajes: IPersonaje[], asignaciones: 
 
     console.log("Personajes:");
     for (const personaje of personajes) {
-        console.log(`- ${personaje.nombre}, Edad: ${personaje.anios} años`);
+        console.log(`- ${personaje.nombre}, Edad: ${personaje.aniosExperiencia} años`);
     }
 
     for (const asignacion of asignaciones) {

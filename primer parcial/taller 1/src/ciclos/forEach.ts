@@ -13,7 +13,7 @@ export const forEach = (series: ISerie[], personajes: IPersonaje[], asignaciones
 
     console.log("Personajes:");
     personajes.forEach((personaje) => {
-        console.log(`- ${personaje.nombre}, Edad: ${personaje.anios} años`);
+        console.log(`- ${personaje.nombre}, Edad: ${personaje.aniosExperiencia} años`);
     });
 
     asignaciones.forEach((asignacion) => {

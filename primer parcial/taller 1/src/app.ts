@@ -18,9 +18,9 @@ const series: ISerie[] = [
   ];
   
 const personajes: IPersonaje[] = [
-    { id: 1, nombre: "Emely", anios: "20" },
-    { id: 2, nombre: "Walter White", anios: "25" },
-    { id: 3, nombre: "Alisson", anios: "30" }
+    { id: 1, nombre: "Emely", aniosExperiencia: "5" },
+    { id: 2, nombre: "Walter White", aniosExperiencia: "10" },
+    { id: 3, nombre: "Alisson", aniosExperiencia: "2" }
   ];
   
 const asignaciones: IAsignacion[] = [

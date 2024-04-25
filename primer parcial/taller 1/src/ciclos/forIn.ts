@@ -14,7 +14,7 @@ export const forIn = (series: ISerie[], personajes: IPersonaje[], asignaciones: 
 
     for (const key in personajes) {
         console.log(`Personajes:`);
-        console.log(`- ${personajes[key].nombre}, Edad: ${personajes[key].anios} años`);
+        console.log(`- ${personajes[key].nombre}, Edad: ${personajes[key].aniosExperiencia} años`);
     }
 
     for (const key in asignaciones) {
