@@ -10,23 +10,28 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.llenarDatos = void 0;
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+const client_1 = require("@prisma/client");
+const prisma = new client_1.PrismaClient();
 function llenarDatos() {
     return __awaiter(this, void 0, void 0, function* () {
+        const nombresSeries = ['Breaking Bad', 'Game of Thrones', 'Stranger Things', 'Friends', 'The Office', 'The Mandalorian', 'Black Mirror', 'The Crown', 'Narcos', 'The Witcher'];
+        const clasificaciones = ['Drama', 'Fantasía', 'Ciencia ficción', 'Comedia', 'Drama', 'Aventura', 'Ciencia ficción', 'Drama', 'Drama', 'Fantasía'];
+        const nombresPersonajes = ['Walter White', 'Jon Snow', 'Eleven', 'Rachel Green', 'Michael Scott', 'The Mandalorian', 'Ashley O', 'Elizabeth II', 'Pablo Escobar', 'Geralt of Rivia'];
+        const nombresPapel = ['Protagonista', 'Antagonista', 'Secundario', 'Cameo', 'Invitado', 'Recurrente', 'Principal', 'Extra', 'Coprotagonista', 'Principal'];
+        const tiposPapel = ['Protagonista', 'Secundario', 'Antagonista', 'Cameo', 'Invitado', 'Recurrente', 'Principal', 'Extra', 'Coprotagonista', 'Principal'];
         try {
             for (let i = 0; i < 10; i++) {
                 yield prisma.serie.create({
                     data: {
-                        nombre: `Serie ${i + 1}`,
-                        clasificacion: `Clasificación ${i + 1}`
+                        nombre: nombresSeries[i],
+                        clasificacion: clasificaciones[i]
                     }
                 });
             }
             for (let i = 0; i < 10; i++) {
                 yield prisma.personaje.create({
                     data: {
-                        nombre: `Personaje ${i + 1}`,
+                        nombre: nombresPersonajes[i],
                         anosExperiencia: Math.floor(Math.random() * 20)
                     }
                 });
@@ -36,8 +41,8 @@ function llenarDatos() {
                     data: {
                         serieId: Math.floor(Math.random() * 10) + 1,
                         personajeId: Math.floor(Math.random() * 10) + 1,
-                        papelInterpreta: `Papel ${i + 1}`,
-                        tipoPapel: `Tipo ${i + 1}`,
+                        papelInterpreta: nombresPapel[i], // Usando nombresPapel en lugar de `Papel ${i + 1}`
+                        tipoPapel: tiposPapel[i],
                         fechaInicio: new Date(),
                         fechaFin: new Date(),
                         temporadas: Math.floor(Math.random() * 10) + 1
