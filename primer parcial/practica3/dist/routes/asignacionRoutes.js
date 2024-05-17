@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const asignacionController_1 = require("../controllers/asignacionController");
+const router = (0, express_1.Router)();
+router.get('/', asignacionController_1.getAsignaciones);
+router.post('/', asignacionController_1.createAsignacion);
+router.put('/:id', asignacionController_1.updateAsignacion);
+router.delete('/:id', asignacionController_1.deleteAsignacion);
+exports.default = router;

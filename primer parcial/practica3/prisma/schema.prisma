@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Definición del modelo de la entidad Serie
+model Serie {
+  id           Int           @id @default(autoincrement())
+  nombre       String
+  clasificacion String
+  estado       estado        @default(activo)
+  asignaciones Asignacion[]
+}
+
+model Personaje {
+  id               Int           @id @default(autoincrement())
+  nombre           String
+  anos_experiencia Int
+  estado           estado        @default(activo)
+  asignaciones     Asignacion[]
+}
+
+model Asignacion {
+  id            Int        @id @default(autoincrement())
+  idSerie       Int
+  idPersonaje   Int
+  papel         String
+  tipoPapel     String
+  fechaInicio   DateTime
+  fechaFin      DateTime?
+  temporadas    Int
+  estado        estado      @default(activo)
+
+  serie         Serie       @relation(fields: [idSerie], references: [id])
+  personaje     Personaje   @relation(fields: [idPersonaje], references: [id])
+}
+
+enum estado {
+  activo
+  pendendiente
+  eliminando
+}
