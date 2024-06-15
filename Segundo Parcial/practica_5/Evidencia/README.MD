@@ -4,6 +4,6 @@
 
 ![alt text](<Get de Asignacion.jpeg>)
 
-![alt text](<GET de Personaje.jpeg>)
-
 ![alt text](<Get de Serie.jpeg>)
+
+![alt text](<GET de Personaje.jpeg>)
