@@ -2,8 +2,8 @@
 
 ![alt text](<Get de los repositorios en git.jpeg>)
 
-![alt text](<Get de Asigancion.jpeg>)
+![alt text](<Get de Asignacion.jpeg>)
 
-![alt text](<Get de Personaje.jpeg>)
+![alt text](<GET de Personaje.jpeg>)
 
 ![alt text](<Get de Serie.jpeg>)
