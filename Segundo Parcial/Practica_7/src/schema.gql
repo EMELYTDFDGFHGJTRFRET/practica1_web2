@@ -1,0 +1,104 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Personaje {
+  id: Int!
+  Personaje: String!
+  aniosDeExperiencia: Int!
+  estado: String!
+  asignaciones: [Asignacion!]
+}
+
+type Asignacion {
+  id: Int!
+  idSerie: Int!
+  idPersonaje: Int!
+  papelQueInterpreta: String!
+  tipoDePapel: String!
+  fechaInicio: String!
+  fechaFin: String!
+  temporadas: Int!
+  estado: String!
+  serie: Serie!
+  personaje: Personaje!
+}
+
+type Serie {
+  id: Int!
+  Serie: String!
+  clasificacion: String!
+  estado: String!
+  asignaciones: [Asignacion!]
+}
+
+type Query {
+  series(estado: String): [Serie!]!
+  serie(id: Int!): Serie!
+  personaje(id: Int!): Personaje!
+  asignacion(id: Int!): Asignacion!
+}
+
+type Mutation {
+  createSerie(createSerieInput: CreateSerieInput!): Serie!
+  updateSerie(updateSerieInput: UpdateSerieInput!): Serie!
+  removeSerie(id: Int!): Serie!
+  createPersonaje(createPersonajeInput: CreatePersonajeInput!): Personaje!
+  updatePersonaje(updatePersonajeInput: UpdatePersonajeInput!): Personaje!
+  removePersonaje(id: Int!): Personaje!
+  createAsignacion(createAsignacionInput: CreateAsignacionInput!): Asignacion!
+  updateAsignacion(updateAsignacionInput: UpdateAsignacionInput!): Asignacion!
+  removeAsignacion(id: Int!): Asignacion!
+}
+
+input CreateSerieInput {
+  id: Int
+  Serie: String!
+  clasificacion: String!
+  estado: String = "activo"
+}
+
+input UpdateSerieInput {
+  id: Int!
+  Serie: String
+  clasificacion: String
+  estado: String = "activo"
+}
+
+input CreatePersonajeInput {
+  id: Int
+  Personaje: String!
+  aniosDeExperiencia: Int!
+  estado: String = "activo"
+}
+
+input UpdatePersonajeInput {
+  id: Int!
+  Personaje: String
+  aniosDeExperiencia: Int
+  estado: String = "activo"
+}
+
+input CreateAsignacionInput {
+  id: Int
+  idSerie: Int!
+  idPersonaje: Int!
+  papelQueInterpreta: String!
+  tipoDePapel: String!
+  fechaInicio: String!
+  fechaFin: String!
+  temporadas: Int!
+  estado: String = "activo"
+}
+
+input UpdateAsignacionInput {
+  id: Int!
+  idSerie: Int
+  idPersonaje: Int
+  papelQueInterpreta: String
+  tipoDePapel: String
+  fechaInicio: String
+  fechaFin: String
+  temporadas: Int
+  estado: String = "activo"
+}
