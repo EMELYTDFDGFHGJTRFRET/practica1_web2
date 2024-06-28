@@ -4,49 +4,50 @@ En este archivo se muestran las pruebas realizadas en Apollo Sandbox para el pro
 
 ## Servidor Corriendo
 
-![Servidor Corriendo](Servidor_Corriendo.jpg)
+![alt text](<Servidor Corriendo.jpg>)
 
-Descripción: Imagen que muestra el servidor corriendo en Apollo Sandbox.
+Descripción: Imagen que muestra el servidor corriendo.
 
 ## Creación de Serie
 
-![Creación de Serie](Creacion_de_Serie.jpeg)
+![alt text](<Creacion de Serie.jpeg>)
 
 Descripción: Imagen que muestra la creación de una serie en la aplicación.
 
 ## Consulta de las Series Creadas
 
-![Consulta de las Series Creadas](Consulta_de_las_Series_Creadas.jpg)
+![alt text](<Consulta de las Series Creadas.jpg>)
 
 Descripción: Imagen que muestra la consulta de las series creadas en la aplicación.
 
 ## Consulta por ID
 
-![Consulta por ID](Consulta_por_ID.jpg)
+![alt text](<Consulta por ID.jpg>)
 
 Descripción: Imagen que muestra la consulta de una serie por su ID específico.
 
 ## Actualización de Serie
 
-![Actualización de Serie](Actualizacion_de_Serie.jpg)
+![alt text](<Actulizacion de Serie.jpg>)
 
 Descripción: Imagen que muestra la actualización de una serie en la aplicación.
 
 ## Consulta si se Actualizó la Serie
 
-![Consulta si se Actualizó la Serie](Consulta_si_se_Actualizo_la_serie.jpg)
+![alt text](<Consulta Si se Actulicacion la serie.jpg>)
+
 
 Descripción: Imagen que muestra la consulta para verificar si se actualizó correctamente una serie.
 
 ## Remover la Serie
 
-![Remover la Serie](Remover_la_serie.jpg)
+![alt text](<Reomover la serie.jpg>)
 
 Descripción: Imagen que muestra la acción de remover una serie de la aplicación.
 
 ## Verificación de Serie
 
-![Verificación de Serie](Verificacion_de_Serie.jpg)
+![alt text](<Verifiacion de Serie..jpg>)
 
 Descripción: Imagen que muestra la verificación de una serie en la aplicación.
 
